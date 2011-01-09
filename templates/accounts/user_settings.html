@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block main %}
+  <p>Welcome, {{ request.user }}!</p>
+<p>User settings</p>
+   <form method="post" action="">{% csrf_token %}
+     {{ user_settings_form.as_p }}
+     <p><input type="submit" value="Save"></p>
+   </form>
+
+{% block usertype_settings %}
+{% endblock%}
+{% endblock %}
+

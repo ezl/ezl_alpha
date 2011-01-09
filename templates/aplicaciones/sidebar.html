@@ -1,0 +1,35 @@
+{% if request.user.is_authenticated %}
+  <p>Hi, {{ request.user.username }}!</p>
+  <p>Your profile looks 70% complete</p>
+
+  <h2>Complete your profile quickly!</h2>
+  <p>Do you want Leasely to fill out the form automatically for you based on your previously filled out applications?</p>
+  <p>Import your default answers so Leasely can fill out applications for you in the future!</p>
+
+  <h2>Application completeness tips</h2>
+  <p>Things you can do to make your rental application seem more attractive to potential landlords!</p>
+  <ul>
+    <li>offer to pay the entire year's rent up front!</li>
+    <li>include cookies muffins!  Not sure how to send them online? Just put them in your CD drive.  Leasely makes sure it gets to the right person!</li>
+    <li>send a bribe!</li>
+    <li>sexual favors are generally frowned upon.  generally avoid this unless you get a <em><strong>REALLY</strong></em> strong hint.</li>
+  </ul>
+
+  <h2>Your recent activity</h2>
+  <p>You have applied to 6 Rentals in the last 30 days.  Go to <a href="">your dashboard</a> to see more details.</p>
+
+{% else %}
+  <p>Hello, ingrate!  You need to log in to submit online rental forms!</p>
+  <p><a href="{% url login %}">Log in</a> or <a href="{% url register %}">create an account</a> to join in on the fun.</p>
+
+  <h2>What's so great about Leasely?</h2>
+  <p><strong>Save money!</strong> Once you have an application on file, you don't have to keep getting new credit checks!  Instead of paying for a credit check for every application, keep reusing your credit check.  This reduces your application fees!</p>
+  <p><strong>Save time!</strong> Stop wasting time scheduling appointments with your broker to meet at starbucks and transfer the paperwork!  If you do this online now, your broker will get immediate notification and the landlord will get the credit check immediately!</p>
+  <p><strong>Convenient!</strong> You're already at your computer... you could be done with this application in less than 10 minutes!  And you won't have to go drop it off with a paper check to your broker/landlord!  And I bet you don't have a fax machine, do you?</p>
+  <p><strong>Better for your credit!</strong> Not only do multiple credit checks cost you more money, they hurt your credit!  Whenever a real estate agency or landlord runs your credit score for tenant screening, it registers what is called a "hard hit" on your credit report.  After a certain number of hard hits within short time period, your credit score gets reduced because credit agencies see this behavior as a sign that you are in financial trouble.  The specifics of the # of hits or the time period aren't public, so don't ask me any more! That's all I know!</p>
+  <p><strong>Get notified faster!</strong> You don't have to wait for the landlord to tell your broker to call you when he makes a decision!  Once the landlord approves the application, you'll be notified immediately, via text message or email.</p>
+  <p><strong>Accountability!</strong> Real estate agents can be slimy. Yuck!</p>
+
+  <a href="{% url register %}"><strong>Sign up today!</strong></a>
+
+{% endif %}

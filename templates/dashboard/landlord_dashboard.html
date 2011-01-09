@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block main %}
+  <p>Welcome, {{ request.user }}!</p>
+  Landlord dashboard
+
+  <p>Your current applications</p>
+  {% include "dashboard/broker_application_list.element" %}
+
+  {% with landlord.rental_set.all as rentals %}
+    <p>You manage or serve as landlord for {{ rentals.count }} rental propert{{ rentals|pluralize:"y,ies" }}</p>
+  {% endwith%}
+    <ul>
+    {% for rental in landlord.rental_set.all %}
+      <li>{{ rental }}
+      </li>
+    {% empty %}
+      <li>Your agency has no rentals in the leasely system</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

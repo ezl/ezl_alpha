@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block main %}
+  <p> LEASELy<p>
+<p>hi walter, here are some users</p>
+User List
+<ul> 
+  <li>rodrigo, Applicant</li> 
+  <li>eric, Applicant</li> 
+  <li>walter, Applicant</li> 
+  <li>phil, Landlord</li> 
+  <li>urbanlux, Agency</li> 
+  <li>james, Broker</li> 
+  <li>THE ONES ABOVE THIS ARE THE ONES THAT HAVE DATA TIED TO THEMi- feel free to use the other ones, create new ones and relationships if you like</li>
+  <li>melissa, Broker</li> 
+  <li>kathy, Broker</li> 
+  <li>apartmentfinders, Agency</li> 
+  <li>melodie, Broker</li> 
+  <li>ericsmom, Landlord</li> 
+</ul>
+
+<p>i see someone created "ericsmom".</p>
+<p>eric walter and rodrigo are applicants. our girlfriends have accounts but they've never been used.</p>
+<p>you'll notice that each user gets directed to a different dashboard depending on what type of user they are</p>
+<p>if you log in as urbanlux, you'll see all the applications open by all brokers that work for him (urban lux is an agency).  you also see all the rental properties that the agency is pimping.  currently there's only one employee of urbanlux (james), but if you added another one (you can do so from the urbanlux dashboard), and then apply to that broker, you'll see additional applicationdocuments show up in the urbanlux dashboard</p>
+<p>if you log in as james, you'll see that he can see all the apps that people have applied to using his urls.  his dashboard also shows him a list of the properties urbanlux (his Agency) represents and his unique URL for each. if he clicks on the link, it takes him to a printable version of the document, which he can print out (not now, its ugly as sin, but it will be sexy) that includes his unique url on it. the idea is that he prints this out and takes it to a showing.  the applicant can fill it out on paper as usual, or if they are cool they'll just see the url and fill it out online.</p>
+<p>james can also create additional rentals in his dashboard.  feel free to try it out.  it will also add that rental to the Agency dashboard and to any other agents that work for the same agency.  when he creates it, he can optionally tag a landlord (just use phil for now, all the use rrelationship adding forms are janky).  if phil gets added, ANY applications that are filled out for this rental property will be sent to phil as well</p>
+<p>the landlord and the broker have the ability to toggle the status of an application once it has been submitted.  after its submitted, landlord and broker dashboards show "SUBMITTED".  after the broker informs the landlord of the applications existence, he notes it in his dashboard.  this toggles the status to "AWAITING LANDLORD DECISION".  at that point, either the broker or the landlord (if there is one logged) can mark the application as either accepted or rejected.  the idea is that once an ACCEPTED status is reached, we can begin the lease signing procedure.</p>
+<p>poop.</p>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block main %}
+  <p>Welcome, {{ request.user }}!</p>
+
+  Broker dashboard {% if broker.agency %}-- You are a broker for {{ broker.agency.name }}{% endif %}
+
+  <p>Your current applications</p>
+  {% include "dashboard/broker_application_list.element" %}
+
+  {% if broker.agency %}
+    <p>Rental units represented at your Agency: {{ broker.agency.name }}</p>
+    <ul>
+    {% for rental in broker.agency.rentals.all %}
+      <li>
+        <a href="{% url remove_rental rental_id=rental.id %}">[delete]</a> 
+        {{ rental }} -- your unique url: 
+        <a href="{% url printable_application rental_id=rental.id broker_id=broker.id %}">http://{{ request.META.HTTP_HOST }}{% url application rental_id=rental.id broker_id=broker.id %}</a>
+      </li>
+    {% empty %}
+      <li>Your agency has no rentals in the leasely system</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+  {% if broker.rentals.all %}
+    <p>You represent these rental units as an independent Broker, outside the purvey of any Agency:</p>
+    <ul>
+    {% for rental in broker.rentals.all %}
+      <li>
+        <a href="{% url remove_rental rental_id=rental.id %}">[delete]</a> 
+        {{ rental }} -- your unique url: 
+        <a href="{% url printable_application rental_id=rental.id broker_id=broker.id %}">http://{{ request.META.HTTP_HOST }}{% url application rental_id=rental.id broker_id=broker.id %}</a>
+      </li>
+    {% empty %}
+      <li>Your have no rentals in the leasely system</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+    <p>Add rental properties</p>
+   <form method="post" action="">{% csrf_token %}
+     {{ unit_and_rental_creation_form.as_p }}
+     <p><input type="submit" value="Add unit and rental"></p>
+   </form>
+
+{% endblock %}

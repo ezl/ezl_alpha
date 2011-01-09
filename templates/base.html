@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>{% block title %}leasely{% endblock %}</title>
+    {% block javascript %}
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+      <script src="{{ MEDIA_URL }}js/site.js"></script>
+    {% endblock javascript%}
+    {% block css%}
+      <link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/screen.css" type="text/css" media="screen, projection">
+      <link rel="stylesheet" href="{{ MEDIA_URL }}css/blueprint/print.css" type="text/css" media="print">
+      <!--[if lt IE 8]>
+        <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
+      <![endif]-->
+
+      {# TODO GET THIS STYLE POOP INTO A STYLESHEET #}
+      <style type="text/css">
+        td {border: 1px solid black; padding: 2px; margin: 0px;}
+        table {BoRder-collapse: collapse; cellspacing:0px;}
+        #messages {
+            background-color: #F4A83D;
+            border-bottom: 1px solid #D6800C;
+            padding 7px 0;
+            font-weight: bold;
+            color: #735005;
+            font-family:"Arial", sans-serif;
+        }
+      </style>
+    {% endblock css%}
+</head>
+<body>
+  {% block body %}
+    {% if messages %}
+      <div id="messages">
+        <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      </div> <!-- messages -->
+    {% endif %}
+    <div id="header">
+      {% block header %}
+      <p>
+        {% if request.user.is_authenticated %}
+          logged in as {{ user }}. <a href="{% url logout %}">logout</a>. <a href="{% url settings %}">settings</a>. 
+        {% else %}
+          <a href="{% url login %}">login</a>
+          <a href="{% url register %}">register</a>
+        {% endif %}
+        <a href="{% url dashboard %}">dashboard</a>
+      </p>
+      {% endblock %}
+    </div> <!-- header -->
+
+    {% comment %}
+    TODO: DELETE ME!
+    {% include "developmentgarbage/navigation.html" %}
+    {% endcomment %}
+
+    <div id="main">
+      {% block main %}{% endblock %}
+    </div>
+    <div id="footer">
+      {% block footer %}{% endblock %}
+    </div>
+  {% endblock %}
+</body>
+</html>

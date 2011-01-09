@@ -1,0 +1,602 @@
+- fields: {domain: example.com, name: example.com}
+  model: sites.site
+  pk: 1
+- fields: {created: !!timestamp '2010-10-10 15:52:09.344879', default_view: Applicant,
+    modified: !!timestamp '2010-10-10 15:52:09.344879', user: 1}
+  model: accounts.userprofile
+  pk: 1
+- fields: {created: !!timestamp '2010-10-10 15:53:43.254879', default_view: Applicant,
+    modified: !!timestamp '2010-10-10 15:53:43.254879', user: 2}
+  model: accounts.userprofile
+  pk: 2
+- fields: {created: !!timestamp '2010-10-10 15:54:01.624879', default_view: Applicant,
+    modified: !!timestamp '2010-10-10 15:54:01.634879', user: 3}
+  model: accounts.userprofile
+  pk: 3
+- fields: {created: !!timestamp '2010-10-10 15:54:29.914879', default_view: Broker,
+    modified: !!timestamp '2010-10-10 15:54:29.914879', user: 4}
+  model: accounts.userprofile
+  pk: 4
+- fields: {created: !!timestamp '2010-10-10 15:54:48.664879', default_view: Broker,
+    modified: !!timestamp '2010-10-10 15:54:48.674879', user: 5}
+  model: accounts.userprofile
+  pk: 5
+- fields: {created: !!timestamp '2010-10-10 15:55:11.674879', default_view: Broker,
+    modified: !!timestamp '2010-10-10 15:55:11.674879', user: 6}
+  model: accounts.userprofile
+  pk: 6
+- fields: {created: !!timestamp '2010-10-10 15:56:11.114879', default_view: Agency,
+    modified: !!timestamp '2010-10-10 15:56:11.114879', user: 7}
+  model: accounts.userprofile
+  pk: 7
+- fields: {created: !!timestamp '2010-10-10 15:57:21.184879', default_view: Agency,
+    modified: !!timestamp '2010-10-10 15:57:21.184879', user: 8}
+  model: accounts.userprofile
+  pk: 8
+- fields: {created: !!timestamp '2010-10-10 15:58:50.264879', default_view: Landlord,
+    modified: !!timestamp '2010-10-10 15:58:50.264879', user: 9}
+  model: accounts.userprofile
+  pk: 9
+- fields: {created: !!timestamp '2010-10-10 15:59:18.914879', default_view: Broker,
+    modified: !!timestamp '2010-10-10 15:59:18.914879', user: 10}
+  model: accounts.userprofile
+  pk: 10
+- fields: {created: !!timestamp '2010-10-10 15:52:09.204879', modified: !!timestamp '2010-10-10
+      15:52:09.204879', user: 1}
+  model: accounts.applicant
+  pk: 1
+- fields: {created: !!timestamp '2010-10-10 15:53:43.184879', modified: !!timestamp '2010-10-10
+      15:53:43.184879', user: 2}
+  model: accounts.applicant
+  pk: 2
+- fields: {created: !!timestamp '2010-10-10 15:54:01.554879', modified: !!timestamp '2010-10-10
+      15:54:01.564879', user: 3}
+  model: accounts.applicant
+  pk: 3
+- fields: {created: !!timestamp '2010-10-10 15:54:29.844879', modified: !!timestamp '2010-10-10
+      15:54:29.844879', user: 4}
+  model: accounts.applicant
+  pk: 4
+- fields: {created: !!timestamp '2010-10-10 15:54:48.594879', modified: !!timestamp '2010-10-10
+      15:54:48.594879', user: 5}
+  model: accounts.applicant
+  pk: 5
+- fields: {created: !!timestamp '2010-10-10 15:55:11.514879', modified: !!timestamp '2010-10-10
+      15:55:11.514879', user: 6}
+  model: accounts.applicant
+  pk: 6
+- fields: {created: !!timestamp '2010-10-10 15:56:11.034879', modified: !!timestamp '2010-10-10
+      15:56:11.044879', user: 7}
+  model: accounts.applicant
+  pk: 7
+- fields: {created: !!timestamp '2010-10-10 15:57:21.104879', modified: !!timestamp '2010-10-10
+      15:57:21.114879', user: 8}
+  model: accounts.applicant
+  pk: 8
+- fields: {created: !!timestamp '2010-10-10 15:58:50.154879', modified: !!timestamp '2010-10-10
+      15:58:50.164879', user: 9}
+  model: accounts.applicant
+  pk: 9
+- fields: {created: !!timestamp '2010-10-10 15:59:18.834879', modified: !!timestamp '2010-10-10
+      15:59:18.844879', user: 10}
+  model: accounts.applicant
+  pk: 10
+- fields:
+    agency: null
+    created: 2010-10-10 15:52:09.214879
+    modified: 2010-10-10 15:52:09.224879
+    rentals: []
+    user: 1
+  model: accounts.broker
+  pk: 1
+- fields:
+    agency: null
+    created: 2010-10-10 15:53:43.204879
+    modified: 2010-10-10 15:53:43.204879
+    rentals: []
+    user: 2
+  model: accounts.broker
+  pk: 2
+- fields:
+    agency: null
+    created: 2010-10-10 15:54:01.574879
+    modified: 2010-10-10 15:54:01.574879
+    rentals: []
+    user: 3
+  model: accounts.broker
+  pk: 3
+- fields:
+    agency: null
+    created: 2010-10-10 15:54:48.614879
+    modified: 2010-10-10 15:54:48.614879
+    rentals: []
+    user: 5
+  model: accounts.broker
+  pk: 5
+- fields:
+    agency: null
+    created: 2010-10-10 15:55:11.574879
+    modified: 2010-10-10 15:55:11.584879
+    rentals: []
+    user: 6
+  model: accounts.broker
+  pk: 6
+- fields:
+    agency: null
+    created: 2010-10-10 15:56:11.054879
+    modified: 2010-10-10 15:56:11.064879
+    rentals: []
+    user: 7
+  model: accounts.broker
+  pk: 7
+- fields:
+    agency: null
+    created: 2010-10-10 15:57:21.124879
+    modified: 2010-10-10 15:57:21.134879
+    rentals: []
+    user: 8
+  model: accounts.broker
+  pk: 8
+- fields:
+    agency: null
+    created: 2010-10-10 15:58:50.174879
+    modified: 2010-10-10 15:58:50.174879
+    rentals: []
+    user: 9
+  model: accounts.broker
+  pk: 9
+- fields:
+    agency: 8
+    created: 2010-10-10 15:59:18.854879
+    modified: 2010-10-10 16:00:32.657902
+    rentals: []
+    user: 10
+  model: accounts.broker
+  pk: 10
+- fields:
+    agency: 8
+    created: 2010-10-10 15:54:29.854879
+    modified: 2010-10-10 16:07:56.927902
+    rentals: []
+    user: 4
+  model: accounts.broker
+  pk: 4
+- fields:
+    address1: null
+    address2: null
+    alternate_phone: null
+    city: null
+    created: 2010-10-10 15:52:09.274879
+    email_address: null
+    fax: null
+    modified: 2010-10-10 15:52:09.284879
+    name: null
+    phone: null
+    principal: null
+    rentals: []
+    state: null
+    user: 1
+    web: null
+    zipcode: ''
+  model: accounts.agency
+  pk: 1
+- fields:
+    address1: null
+    address2: null
+    alternate_phone: null
+    city: null
+    created: 2010-10-10 15:53:43.214879
+    email_address: null
+    fax: null
+    modified: 2010-10-10 15:53:43.224879
+    name: null
+    phone: null
+    principal: null
+    rentals: []
+    state: null
+    user: 2
+    web: null
+    zipcode: ''
+  model: accounts.agency
+  pk: 2
+- fields:
+    address1: null
+    address2: null
+    alternate_phone: null
+    city: null
+    created: 2010-10-10 15:54:01.594879
+    email_address: null
+    fax: null
+    modified: 2010-10-10 15:54:01.594879
+    name: null
+    phone: null
+    principal: null
+    rentals: []
+    state: null
+    user: 3
+    web: null
+    zipcode: ''
+  model: accounts.agency
+  pk: 3
+- fields:
+    address1: null
+    address2: null
+    alternate_phone: null
+    city: null
+    created: 2010-10-10 15:54:29.874879
+    email_address: null
+    fax: null
+    modified: 2010-10-10 15:54:29.874879
+    name: null
+    phone: null
+    principal: null
+    rentals: []
+    state: null
+    user: 4
+    web: null
+    zipcode: ''
+  model: accounts.agency
+  pk: 4
+- fields:
+    address1: null
+    address2: null
+    alternate_phone: null
+    city: null
+    created: 2010-10-10 15:54:48.634879
+    email_address: null
+    fax: null
+    modified: 2010-10-10 15:54:48.634879
+    name: null
+    phone: null
+    principal: null
+    rentals: []
+    state: null
+    user: 5
+    web: null
+    zipcode: ''
+  model: accounts.agency
+  pk: 5
+- fields:
+    address1: null
+    address2: null
+    alternate_phone: null
+    city: null
+    created: 2010-10-10 15:55:11.604879
+    email_address: null
+    fax: null
+    modified: 2010-10-10 15:55:11.604879
+    name: null
+    phone: null
+    principal: null
+    rentals: []
+    state: null
+    user: 6
+    web: null
+    zipcode: ''
+  model: accounts.agency
+  pk: 6
+- fields:
+    address1: 1 Infinity Loop
+    address2: ''
+    alternate_phone: ''
+    city: Cupertino
+    created: 2010-10-10 15:56:11.074879
+    email_address: ''
+    fax: ''
+    modified: 2010-10-10 15:56:54.034879
+    name: Apartment Finders
+    phone: ''
+    principal: ''
+    rentals: []
+    state: null
+    user: 7
+    web: ''
+    zipcode: ''
+  model: accounts.agency
+  pk: 7
+- fields:
+    address1: Chicago at Wells
+    address2: ''
+    alternate_phone: ''
+    city: Chicago
+    created: 2010-10-10 15:57:21.144879
+    email_address: ''
+    fax: ''
+    modified: 2010-10-10 15:57:41.974879
+    name: Urban Lux
+    phone: ''
+    principal: ''
+    rentals: [2, 1, 3, 4]
+    state: IL
+    user: 8
+    web: ''
+    zipcode: ''
+  model: accounts.agency
+  pk: 8
+- fields:
+    address1: null
+    address2: null
+    alternate_phone: null
+    city: null
+    created: 2010-10-10 15:58:50.204879
+    email_address: null
+    fax: null
+    modified: 2010-10-10 15:58:50.214879
+    name: null
+    phone: null
+    principal: null
+    rentals: []
+    state: null
+    user: 9
+    web: null
+    zipcode: ''
+  model: accounts.agency
+  pk: 9
+- fields:
+    address1: null
+    address2: null
+    alternate_phone: null
+    city: null
+    created: 2010-10-10 15:59:18.874879
+    email_address: null
+    fax: null
+    modified: 2010-10-10 15:59:18.874879
+    name: null
+    phone: null
+    principal: null
+    rentals: []
+    state: null
+    user: 10
+    web: null
+    zipcode: ''
+  model: accounts.agency
+  pk: 10
+- fields: {created: !!timestamp '2010-10-10 15:52:09.324879', modified: !!timestamp '2010-10-10
+      15:52:09.324879', user: 1}
+  model: accounts.landlord
+  pk: 1
+- fields: {created: !!timestamp '2010-10-10 15:53:43.234879', modified: !!timestamp '2010-10-10
+      15:53:43.244879', user: 2}
+  model: accounts.landlord
+  pk: 2
+- fields: {created: !!timestamp '2010-10-10 15:54:01.614879', modified: !!timestamp '2010-10-10
+      15:54:01.614879', user: 3}
+  model: accounts.landlord
+  pk: 3
+- fields: {created: !!timestamp '2010-10-10 15:54:29.894879', modified: !!timestamp '2010-10-10
+      15:54:29.894879', user: 4}
+  model: accounts.landlord
+  pk: 4
+- fields: {created: !!timestamp '2010-10-10 15:54:48.644879', modified: !!timestamp '2010-10-10
+      15:54:48.654879', user: 5}
+  model: accounts.landlord
+  pk: 5
+- fields: {created: !!timestamp '2010-10-10 15:55:11.654879', modified: !!timestamp '2010-10-10
+      15:55:11.664879', user: 6}
+  model: accounts.landlord
+  pk: 6
+- fields: {created: !!timestamp '2010-10-10 15:56:11.094879', modified: !!timestamp '2010-10-10
+      15:56:11.094879', user: 7}
+  model: accounts.landlord
+  pk: 7
+- fields: {created: !!timestamp '2010-10-10 15:57:21.164879', modified: !!timestamp '2010-10-10
+      15:57:21.164879', user: 8}
+  model: accounts.landlord
+  pk: 8
+- fields: {created: !!timestamp '2010-10-10 15:58:50.244879', modified: !!timestamp '2010-10-10
+      15:58:50.244879', user: 9}
+  model: accounts.landlord
+  pk: 9
+- fields: {created: !!timestamp '2010-10-10 15:59:18.894879', modified: !!timestamp '2010-10-10
+      15:59:18.894879', user: 10}
+  model: accounts.landlord
+  pk: 10
+- fields: {address1: '', address2: '', alternate_phone: '', applicant: 3, bankruptcy: false,
+    broker: 10, city: '', created: !!timestamp '2010-10-10 16:10:40.427902', crime: false,
+    date_of_birth: 2001-05-05, email_address: '', employer: '', eviction: false, extra: '',
+    first_name: 'anotherr ', income: null, income2: null, landlord_email: '', landlord_name: '',
+    landlord_phone: '', last_name: chingchong, middle_name: aplication, modified: !!timestamp '2010-10-10
+      16:10:40.437902', occupation: '', phone: '', rent: false, rental: 1, ssn: 451-57-5706,
+    state: null, status: INCOMPLETE, supervisor_name: '', supervisor_phone: '', zipcode: ''}
+  model: aplicaciones.applicationdocument
+  pk: 2
+- fields: {address1: '', address2: '', alternate_phone: '', applicant: 3, bankruptcy: false,
+    broker: 10, city: '', created: !!timestamp '2010-10-10 16:09:52.287902', crime: false,
+    date_of_birth: null, email_address: '', employer: '', eviction: false, extra: '',
+    first_name: My first application, income: null, income2: null, landlord_email: '',
+    landlord_name: '', landlord_phone: '', last_name: test, middle_name: test, modified: !!timestamp '2010-10-10
+      16:11:28.237902', occupation: '', phone: '', rent: false, rental: 2, ssn: '',
+    state: null, status: SUBMITTED, supervisor_name: '', supervisor_phone: '', zipcode: ''}
+  model: aplicaciones.applicationdocument
+  pk: 1
+- fields: {created: !!timestamp '2010-10-10 16:04:58.147902', creator: 10, modified: !!timestamp '2010-10-10
+      16:04:58.147902', rent_amount: 1325.0, start_date: 2010-11-16, unit: 2}
+  model: rentals.rental
+  pk: 2
+- fields: {created: !!timestamp '2010-10-10 16:01:51.397902', creator: 10, modified: !!timestamp '2010-10-10
+      16:06:43.997902', rent_amount: 9500.0, start_date: 2010-10-01, unit: 4}
+  model: rentals.rental
+  pk: 1
+- fields: {created: !!timestamp '2010-10-10 16:05:25.317902', creator: 10, modified: !!timestamp '2010-10-10
+      16:07:19.647902', rent_amount: 9500.0, start_date: 2010-11-16, unit: 1}
+  model: rentals.rental
+  pk: 3
+- fields: {created: !!timestamp '2010-10-10 16:09:01.917902', creator: 4, modified: !!timestamp '2010-10-10
+      16:09:01.917902', rent_amount: 2600.0, start_date: 2011-03-01, unit: 5}
+  model: rentals.rental
+  pk: 4
+- fields: {address1: 141 W Jackson, address2: 'Ste #800', city: Chicago, created: !!timestamp '2010-10-10
+      16:01:51.327902', modified: !!timestamp '2010-10-10 16:01:51.377902', state: IL,
+    zipcode: '60604'}
+  model: units.unit
+  pk: 1
+- fields: {address1: 1211 S Clark, address2: Apt. 4302, city: Chicago, created: !!timestamp '2010-10-10
+      16:04:58.107902', modified: !!timestamp '2010-10-10 16:04:58.117902', state: IL,
+    zipcode: '60601'}
+  model: units.unit
+  pk: 2
+- fields: {address1: 1211 S Clark, address2: Apt. 4302, city: Chicago, created: !!timestamp '2010-10-10
+      16:05:25.297902', modified: !!timestamp '2010-10-10 16:05:25.307902', state: IL,
+    zipcode: '60601'}
+  model: units.unit
+  pk: 3
+- fields: {address1: 25 E Superior, address2: '#1308', city: Chicago, created: !!timestamp '2010-10-10
+      16:06:26.097902', modified: !!timestamp '2010-10-10 16:06:26.097902', state: IL,
+    zipcode: '60611'}
+  model: units.unit
+  pk: 4
+- fields: {address1: 2041 N Milwaukee, address2: Unit J, city: Bucktown, created: !!timestamp '2010-10-10
+      16:09:01.907902', modified: !!timestamp '2010-10-10 16:09:01.907902', state: null,
+    zipcode: '60657'}
+  model: units.unit
+  pk: 5
+- fields:
+    date_joined: 2010-10-10 15:52:09.074879
+    email: ''
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2010-10-10 15:52:09.114879
+    last_name: ''
+    password: sha1$f1ba4$72dfec391fbd9404e698a0bf17e04b2c5f747544
+    user_permissions: []
+    username: eric
+  model: auth.user
+  pk: 1
+- fields:
+    date_joined: 2010-10-10 15:53:43.074879
+    email: ''
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2010-10-10 15:53:43.124879
+    last_name: ''
+    password: sha1$08b60$44652f16dad618dae60be11367a1a9dfca100a77
+    user_permissions: []
+    username: rodrigo
+  model: auth.user
+  pk: 2
+- fields:
+    date_joined: 2010-10-10 15:54:48.504879
+    email: ''
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2010-10-10 15:54:48.534879
+    last_name: ''
+    password: sha1$b3658$e251b8044c5ad0b50fdd1635d43ad004af5d2bfc
+    user_permissions: []
+    username: melissa
+  model: auth.user
+  pk: 5
+- fields:
+    date_joined: 2010-10-10 15:55:11.314879
+    email: ''
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2010-10-10 15:55:11.424879
+    last_name: ''
+    password: sha1$a5dd0$fda83306531737aa283e49981cfb3b77445693b5
+    user_permissions: []
+    username: kathy
+  model: auth.user
+  pk: 6
+- fields:
+    date_joined: 2010-10-10 15:56:10.934879
+    email: ''
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2010-10-10 15:56:10.984879
+    last_name: ''
+    password: sha1$7b612$6b7d0784f7ae63898428f8659bea759713d1a793
+    user_permissions: []
+    username: apartmentfinders
+  model: auth.user
+  pk: 7
+- fields:
+    date_joined: 2010-10-10 15:58:50.064879
+    email: ''
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2010-10-10 15:58:50.104879
+    last_name: ''
+    password: sha1$bdd02$ccb106e0154bc46e92973abfe48a31b5aa1663b5
+    user_permissions: []
+    username: phil
+  model: auth.user
+  pk: 9
+- fields:
+    date_joined: 2010-10-10 15:59:18.744879
+    email: ''
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2010-10-10 16:01:01.387902
+    last_name: ''
+    password: sha1$df546$220348032130a9395a71c4b229a4bbe181e8d159
+    user_permissions: []
+    username: james
+  model: auth.user
+  pk: 10
+- fields:
+    date_joined: 2010-10-10 15:54:29.754879
+    email: ''
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2010-10-10 16:08:15.107902
+    last_name: ''
+    password: sha1$f76b9$6e39ba9edc67dbec24783e0c20adc3bcfe610254
+    user_permissions: []
+    username: melodie
+  model: auth.user
+  pk: 4
+- fields:
+    date_joined: 2010-10-10 15:54:01.454879
+    email: ''
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2010-10-10 16:09:31.447902
+    last_name: ''
+    password: sha1$75e6a$d3e7bd4b6088f0c30a232d68498bf8cf3f10e141
+    user_permissions: []
+    username: walter
+  model: auth.user
+  pk: 3
+- fields:
+    date_joined: 2010-10-10 15:57:21.004879
+    email: ''
+    first_name: ''
+    groups: []
+    is_active: true
+    is_staff: false
+    is_superuser: false
+    last_login: 2010-10-10 16:11:59.757902
+    last_name: ''
+    password: sha1$cc3f5$83f5ba42d805f9114d446f814f57f4bf06ce5cca
+    user_permissions: []
+    username: urbanlux
+  model: auth.user
+  pk: 8

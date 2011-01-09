@@ -1,0 +1,42 @@
+<table>
+  <tr>
+    <th>Applicant</th>
+    <th>Unit</th>
+    <th>Lease Start Date</th>
+    <th>Application Submission Date</th>
+    <th>Status</th>
+    <th>Action</th>
+    <th>Delete</th>
+  </tr>
+  {% for application in application_document_list %}
+    <tr>
+      <td>
+        <a href={% url view_application application_document_id=application.id %}>
+          {{ application.applicant.user.username }}
+        </a>
+      </td>
+      <td>{{ application.rental.unit }}</td>
+      <td>{{ application.rental.start_date }}</td>
+      <td>{{ application.created }}</td>
+      <td>{{ application.status }}</td>
+      <td>
+    {% comment %}
+      TODO HOLY SHIT TODO There's no "elseif" or "case" in template tags?  i used nested if loops to get around this
+    {% endcomment %}
+        {% if application.status == "SUBMITTED" %}
+          <a href="{% url set_application_pending_landlord_decision application_document_id=application.id %}">Click to indicate landlord has been notified</a>
+        {% else %}
+          {% if application.status == "AWAITING LANDLORD DECISION" %}
+            <a href="{% url accept_application application_document_id=application.id %}">Accept</a> / 
+            <a href="{% url reject_application application_document_id=application.id %}">Reject</a>
+          {% else %}
+            N/A
+          {% endif %}
+        {% endif %}
+      </td>
+      <td><a href="{% url remove_application application_document_id=application.id %}">X</a></td>
+    </tr>
+  {% empty %}
+    <tr><td colspan=6>No applications found</td></tr>
+  {% endfor %}
+</table>

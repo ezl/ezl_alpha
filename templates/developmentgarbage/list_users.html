@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block main %}
+User List
+<ul>
+{% for user in object_list %}
+  <li>{{ user }}, {{ user.get_profile.default_view }}</li>
+{% empty %}
+  <li>no users</li>
+{% endfor %}
+</ul>
+{% endblock %}

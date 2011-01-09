@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <div style="float:left; width:400px;">
+      <p>
+        Online application URL: <a href="{% url application rental_id=rental.id broker_id=broker.id %}">http://{{ request.META.HTTP_HOST }}{% url application rental_id=rental.id broker_id=broker.id %}</a></p>
+      <p>Rental Application for: {{ rental }}</p>
+      <p>Broker: {{ broker }}</p>
+      <form method="post" action="">{% csrf_token %}
+        {{ application_document_form.as_p }}
+        {% if request.user.is_authenticated %}
+          <p><input type="submit" name="submit" value="Save">
+          <input type="submit" name="submit" value="Submit to landlord"></p>
+        {% else %}
+          [GRAYED OUT SUBMIT AND SAVE BUTTONS!]
+          <p>You need to log in to save or submit this application.  Don't have an account? <a href="{% url register %}">Create one!</a></p>
+        {% endif %}
+      </form>
+    </div>
+    {% if not printable %}
+      <div id="application_sidebar" style="float:left; padding: 30px; width:300px; border:1px solid grey;">
+        {% include "aplicaciones/sidebar.html" %}
+      </div>
+    {% endif%}
+{% endblock %}

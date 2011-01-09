@@ -1,0 +1,34 @@
+<table>
+  <tr>
+    <th>Applicant</th>
+    <th>Broker</th>
+    <th>Unit</th>
+    <th>Lease Start Date</th>
+    <th>Application Submission Date</th>
+    <th>Status</th>
+    <th>Delete</th>
+  </tr>
+  {% for application in application_document_list %}
+    <tr>
+      <td>
+        {% if application.status == "INCOMPLETE" or application.status == "COMPLETE" %}
+          <a href="{% url edit_application application_document_id=application.id %}">
+            {{ application.applicant.user.username }}
+          </a>
+        {% else %}
+          <a href="{% url view_application application_document_id=application.id %}">
+            {{ application.applicant.user.username }}
+          </a>
+        {% endif %}
+      </td>
+      <td>{{ application.broker.user.username }}</td>
+      <td>{{ application.rental.unit }}</td>
+      <td>{{ application.rental.start_date }}</td>
+      <td>{{ application.created }}</td>
+      <td>{{ application.status }}</td>
+      <td><a href="{% url remove_application application_document_id=application.id %}">X</a></td>
+    </tr>
+  {% empty %}
+    <tr><td colspan=6>No applications found</td></tr>
+  {% endfor %}
+</table>

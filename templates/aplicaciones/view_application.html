@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <div>
+      <p>
+        Online application URL: <a href="{% url application rental_id=rental.id broker_id=broker.id %}">http://{{ request.META.HTTP_HOST }}{% url application rental_id=rental.id broker_id=broker.id %}</a></p>
+      <p>Rental Application for: {{ rental }}</p>
+      <p>Broker: {{ broker }}</p>
+    </div>
+    {% for field in application_document_form %}
+      {{ field.label }}: {{ field.initial }} : {{field}}<br />
+    {% endfor %}
+{% endblock %}

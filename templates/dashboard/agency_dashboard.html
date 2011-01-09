@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block main %}
+  <p>Welcome, {{ request.user }}!</p>
+  Agency dashboard
+
+  <p>Broker list</p>
+    <ul>
+    {% for broker in broker_list %}
+      <li>{{ broker }}</li>
+    {% empty %}
+      <li>You don't have any brokers representing your agency yet</li>
+    {% endfor %}
+    </ul>
+
+  <p>Add a broker to represent your agency</p>
+  <pre>
+  form to insert email or add a broker.  process here should be:
+  insert an email address.
+  
+  case 1: email address doesn't have a leasely account: send subject an email telling them
+  that real estate agency AMCO has said they are an independent agent of that firm.  They can click
+  the link to come to the site, create an account, and they will be registered as members of the agency.
+
+  case 2: email address has a leasely account: send them a message and ask them to confirm their membership
+  being a member of the agency means you have access to all the agency's listings and that applications you
+  initiate will be reported to the agency.
+
+  for now, just a pulldown menu to demonstrate the site behavior.
+  </pre>
+   <form method="post" action="">{% csrf_token %}
+     {{ broker_adoption_form.as_p }}
+     <p><input type="submit" value="Add broker"></p>
+   </form>
+
+  <p>Current applications</p>
+  These are applications that are currently pending or recently completed by your staff
+    <ul>
+    {% for application_document in application_document_list %}
+      <li>{{ application_document }}</li>
+    {% empty %}
+      <li>There are no live applications by your agency or broker's at your agency</li>
+    {% endfor %}
+    </ul>
+
+  <p>Rental units represented</p>
+    <ul>
+    {% for rental in rental_list %}
+      <li>
+        <a href="{% url remove_rental rental_id=rental.id %}">[delete]</a> 
+        {{ rental }}
+      </li>
+    {% empty %}
+      <li>Your agency has no rentals in the leasely system</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}

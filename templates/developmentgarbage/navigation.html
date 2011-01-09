@@ -1,0 +1,16 @@
+<div id="navigation" style="border: 1px solid black;">
+  <p>temporary navigation bar</p>
+  <a href="{% url application rental_id=1 broker_id=1 %}">application form for broker 1 rental 1</a>
+  <br />
+  <a href="{% url create_unit %}">create unit</a>
+  <a href="{% url list_units %}">list all units</a>
+  <a href="{% url update_unit unit_id=1 %}">update unit 1</a>
+  <br />
+  <a href="{% url create_rental %}">create rental</a>
+  <a href="{% url list_rentals %}">list all rentals</a>
+  <a href="{% url update_rental rental_id=1 %}">update rental 1</a>
+  <br />
+  <a href="{% url list_users %}">list all users</a>
+  <a href="{% url list_application_documents %}">list application documents</a>
+
+</div>

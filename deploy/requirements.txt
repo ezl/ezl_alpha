@@ -1,0 +1,11 @@
+Django==1.2.3
+Fabric==0.9.0
+PyYAML==3.09
+Werkzeug==0.5.1
+django-annoying==0.7.4
+django-debug-toolbar==0.8.1
+django-extensions==0.4.1
+ipython==0.10
+psycopg2==2.2.2
+pycrypto==2.3
+wsgiref==0.1.2

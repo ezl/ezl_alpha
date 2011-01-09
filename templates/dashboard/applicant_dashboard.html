@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block main %}
+  <p>Welcome, {{ request.user }}!</p>
+  Applicant dashboard
+
+  <p>Here is a list of applications you have submitted or are working on</p>
+  {% include "dashboard/applicant_application_list.element" %}
+{% endblock %}

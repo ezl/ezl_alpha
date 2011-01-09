@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block main %}
+  <form method="post" action="">{% csrf_token %}
+    {% if not rental %}
+      {{ rental_selection_form.as_p }}
+    {% else %}
+      You are applying to rent: {{ rental }}
+    {% endif %}
+    {% if not broker %}
+      {{ broker_selection_form.as_p }}
+    {% else %}
+      You have selected {{ broker }} as your broker
+    {% endif %}
+    {{ application_form.as_p }}
+    <p><input type="submit" value="Save"></p>
+  </form>
+{% endblock %}
